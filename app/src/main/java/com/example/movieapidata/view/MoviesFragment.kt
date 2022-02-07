@@ -21,7 +21,6 @@ class MoviesFragment: Fragment() {
 //    View model instance to handle any logic needed
     private val viewModel by viewModels<MoviesViewModel>()
 
-//    First method called when fragment comes into view and inflates view along with binding to right XML
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -31,13 +30,11 @@ class MoviesFragment: Fragment() {
         setHasOptionsMenu(true)
     }.root
 
-//    After view is completed can call upon certain methods post load
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initObservers()
     }
 
-//    Creates observable data that helps move along data through api call
     private fun initObservers() = with(viewModel) {
         viewState.observe(viewLifecycleOwner) { state ->
             binding.loader.isVisible = state is MovieViewState.Loading
@@ -46,17 +43,14 @@ class MoviesFragment: Fragment() {
         }
     }
 
-//    Called when api returns a success message and loads returned objects
     private fun handleSuccess(movies: List<Movie>) {
 
     }
 
-//    Called when api fails and gives reason to why with a string
     private fun handleError(exception: String) {
 
     }
 
-//    When view is no longer in use cleans up binding
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

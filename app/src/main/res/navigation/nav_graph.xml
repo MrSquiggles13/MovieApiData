@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/inputFragment">
-    <fragment
-        android:id="@+id/inputFragment"
-        android:name="com.example.movieapidata.view.InputFragment"
-        android:label="InputFragment"
-        tools:layout="@layout/fragment_input">
-        <action
-            android:id="@+id/action_inputFragment_to_moviesFragment"
-            app:destination="@id/moviesFragment" />
-    </fragment>
+    app:startDestination="@id/moviesFragment">
+
     <fragment
         android:id="@+id/moviesFragment"
         android:name="com.example.movieapidata.view.MoviesFragment"
-        android:label="MoviesFragment"
-        tools:layout="@layout/fragment_movies">
-        <argument
-            android:name="apiSearch"
-            app:argType="string"/>
-    </fragment>
+        android:label="MoviesFragment" />
 </navigation>

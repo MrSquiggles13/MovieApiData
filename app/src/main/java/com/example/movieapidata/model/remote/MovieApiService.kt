@@ -16,5 +16,5 @@ interface MovieApiService {
     @GET("/s")
     suspend fun getMovie(
         @Query("search") search: String
-    ): List<Movie>
+    ): Movie
 }

@@ -19,6 +19,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"/>
 
 <!--  View for movie plot  -->
@@ -27,6 +28,7 @@
         android:id="@+id/plot"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintBottom_toBottomOf="@+id/poster"/>
 

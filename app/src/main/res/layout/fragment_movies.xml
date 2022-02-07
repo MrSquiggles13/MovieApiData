@@ -5,6 +5,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+<!--  Visual representation of waiting for data to come through  -->
+
+    <ProgressBar
+        android:id="@+id/loader"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_centerHorizontal="true" />
+
 <!-- Sets a place holder for list of data that wants to be displayed   -->
 
     <androidx.recyclerview.widget.RecyclerView

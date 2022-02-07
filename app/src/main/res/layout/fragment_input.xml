@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--  Line to constrain where views should be placed  -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".33"/>
+
+<!--  Input text from user  -->
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:hint="@string/count"
+        app:layout_constraintTop_toTopOf="@id/gl_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:autofillHints="countForUrls" />
+
+<!--  Submit input text  -->
+
+    <Button
+        android:id="@+id/btn_search_submit"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/submit"
+        android:textSize="11sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

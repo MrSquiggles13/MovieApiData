@@ -25,12 +25,12 @@ class MoviesViewModel(state: SavedStateHandle): ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             search?.let { search ->
                 val state = try {
-                    val movies = MovieApiRepo.searchMovies(search)
-                    MovieViewState.Success(movies = movies)
+                    val response = MovieApiRepo.searchMovies(search)
+                    MovieViewState.Success(movies = response.Search)
                 } catch(ex: Exception) {
                     MovieViewState.Error(ex.message ?: "Something went wrong")
                 }
-//                Seperate Thread (main) viewstate object is set
+//                Separate Thread (main) viewstate object is set
                 withContext(Dispatchers.Main) {
                     _viewState.value = state
                 }

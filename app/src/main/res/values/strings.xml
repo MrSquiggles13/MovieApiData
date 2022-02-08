@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MovieApiData</string>
+    <string name="submit">Submit</string>
+    <string name="count">Search Movies</string>
 </resources>
